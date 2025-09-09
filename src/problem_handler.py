@@ -1,6 +1,5 @@
 
 
-
 class ProblemHandler():
     def __init__(self, data):
         self.statement = data.get('problem_statement', 'N/A')

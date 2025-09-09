@@ -1,24 +1,9 @@
-from src.data_retrival import Data_Retrival
-from src.agent import AI_Agent
-from yaspin import yaspin
-import time
+from src.app import App
 
 def main():
     url = input("Enter Problem URL: ")
-    
-    data = Data_Retrival(url=url)
-    problem_data = data.get_problem_data()
-    
-    agent = AI_Agent(problem_data)
-    
-    print("--------------------------------------------------------------------------")
-    with yaspin(text="Simplifying problem...", color="cyan") as sp:
-        simplified_problem = agent.get_agent_response()
-        
-        sp.text = "Done."
-        sp.ok("✅")
-        
-        print('\n' + simplified_problem)
+    app = App(url)
+    app.start_app()
 
 # Entry Point
 if __name__ == "__main__":

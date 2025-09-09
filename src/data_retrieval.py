@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class Data_Retrival():
+class DataRetrieval():
     def __init__(self, url):
         driver = Driver()
         web_driver = driver.setup_driver()

@@ -12,7 +12,6 @@ class Driver:
         self.options.add_argument('--disable-gpu')
         self.options.add_argument('--window-size=600,800')
         
-        self.driver_executable_path = '/tmp/chromedriver-linux64/chromedriver'
         self.browser_executable_path = '/usr/bin/chromium-browser'
         
         self.options.binary_location = self.browser_executable_path
@@ -21,7 +20,6 @@ class Driver:
         
         driver = uc.Chrome(
             options = self.options,
-            driver_executable_path = self.driver_executable_path,
             browser_executable_path = self.browser_executable_path
         )
         

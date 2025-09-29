@@ -12,6 +12,7 @@ class DataRetrieval():
         wait = WebDriverWait(web_driver, 15)
         wait.until(EC.presence_of_element_located((By.CLASS_NAME, "problemindexholder")))
         self.soup = BeautifulSoup(web_driver.page_source, 'html.parser')
+        web_driver.quit()  # Close the browser after getting the page source
     
     def get_problem_data(self):
         
